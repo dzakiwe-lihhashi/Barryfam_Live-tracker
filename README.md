@@ -43,5 +43,11 @@ create table if not exists public.tasks (
 
 > The app works without Supabase; it will continue using local demo data + localStorage.
 
+### If the app says “Cloud sync is off. Working locally in your browser only.”
+- Make sure both `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are set in `.env.local`.
+- Restart the dev server after editing env vars.
+- Confirm the `public.tasks` table exists with the schema above.
+
+
 ## Deploy
 Deploy to Vercel with the same environment variables if you want Supabase task sync enabled.
